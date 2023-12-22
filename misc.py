@@ -13,6 +13,8 @@ def generate_regex_pattern(name):
 
 
 async def compare_profile_pic(member, owner):
+    if owner.avatar == None or member.avatar == None:
+        return 0
 
     owner_avatar_url = owner.avatar.url
     member_avatar_url = member.avatar.url
